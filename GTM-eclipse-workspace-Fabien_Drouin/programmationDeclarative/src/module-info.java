@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Adminl
- *
- */
-module programmationDeclarative {
-}

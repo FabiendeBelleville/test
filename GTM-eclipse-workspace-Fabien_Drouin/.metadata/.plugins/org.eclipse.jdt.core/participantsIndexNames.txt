@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\Adminl\2018-10-01-eclipse-workspace-Fabien_Drouin\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2617166424.index
-\TPSimpleJspServlet5Session\src
-C:\Users\Adminl\2018-10-01-eclipse-workspace-Fabien_Drouin\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\58482203.index
-\fabienFormulaire\src
-C:\Users\Adminl\2018-10-01-eclipse-workspace-Fabien_Drouin\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1204387699.index
-\TPSimpleJspServlet5Session\src

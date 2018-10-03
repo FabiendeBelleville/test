@@ -1,9 +1,0 @@
-package presentation;
-
-public class Vue {
-	
-	public void creationCustomer() {
-		
-	}
-	
-}

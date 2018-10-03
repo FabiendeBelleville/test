@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"progfonctionnelle","l":"GuessNumber"}]

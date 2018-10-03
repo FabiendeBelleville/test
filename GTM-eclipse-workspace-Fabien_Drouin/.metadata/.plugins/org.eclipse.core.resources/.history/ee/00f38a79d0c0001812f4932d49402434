@@ -1,7 +1,0 @@
-package service;
-
-public interface CustomerService {
-	
-	public void ajouter Customer
-
-}
