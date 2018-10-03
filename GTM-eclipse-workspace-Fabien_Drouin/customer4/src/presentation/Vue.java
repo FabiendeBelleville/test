@@ -1,0 +1,25 @@
+package presentation;
+
+import exception.MyBusinessException;
+import model.Customer;
+import service.CustomerService;
+import service.CustomerServiceImpl;
+
+public class Vue {
+	private CustomerService service = new CustomerServiceImpl();
+
+	public void creationCustomer() {
+		/**
+		 * On suppose que l'utilisateur saisit les infos du Customer
+		 */
+		Customer c = new Customer("DROUIN", "Fabien", 32);
+		
+		try {
+			service.ajouterCustomer(c);
+		} catch (MyBusinessException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

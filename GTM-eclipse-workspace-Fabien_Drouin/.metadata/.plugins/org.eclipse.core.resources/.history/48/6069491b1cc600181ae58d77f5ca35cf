@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TPSimpleJspServlet3Redir</title>
+</head>
+<body>
+
+	<h1>Page login - Formulaire</h1>
+	<p>Cher utilisateur, veuillez vous loger</p>
+
+	<form method="post" action="CestQui">
+		<fieldset>
+			<legend>log in</legend>
+
+			<p>
+				nom : <input type="text" name="nom" placeholder="Dupont" />
+				<br>
+				<br>
+				password : <input type="text" name="password" placeholder="pas azerty..." /> <br />
+				<br />
+				
+				<input type="radio" name="sex" value="femme" id="femme" />
+				<label for="femme">femme</label> <br /> <input type="radio"
+					name="sex" value="homme" id="homme" /> <label for="homme">homme</label>
+				<br />
+					
+			<br> Pays :
+				<select name="pays" id="pays">
+					<option value="France">France</option>
+					<option value="Grece">Grece</option>
+					<option value="Albanie">Albanie</option>
+					<option value="Nigeria">Nigeria</option>
+
+				</select>
+			</p>
+
+
+		</fieldset>
+
+
+		<fieldset>
+			<legend>hobbies</legend>
+
+
+			<p>
+				 <input type="checkbox" name="hobbies" value="cinéma">cinéma<br>
+					<input type="checkbox" name="hobbies" value="littérature">littérature<br>
+					<input type="checkbox" name="hobbies" value="gastronomie">gastronomie<br>
+			</p>
+
+
+		</fieldset>
+
+		<input type="reset" value="reset" /> <input type="submit"
+			value="Envoyer" />
+	</form>
+
+
+
+
+</body>
+</html>

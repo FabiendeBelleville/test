@@ -1,0 +1,14 @@
+package service;
+
+import model.Customer;
+
+public class CustomerServiceImpl implements CustomerService{
+
+	@Override
+	public void ajouterCustomer(Customer c) throws MyBusinessException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+}

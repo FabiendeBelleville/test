@@ -1,0 +1,31 @@
+package presentation;
+
+import model.Customer;
+import persistance.CustomerDAO;
+import persistance.CustomerDAOImpl;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// initialisation de ma DAO
+		CustomerDAO DAO = new CustomerDAOImpl();
+
+		// Créer un Customer
+//		DAO.create(new Customer("AULNETTE", "Bilout", 54));
+
+		// lire toute la base Customer
+		//DAO.findAll();
+		System.out.println(DAO.findAll());
+
+		// Trouver un Customer par id
+//		System.out.println(DAO.findById(12));
+
+		// Mettre à jour un Customer
+//		Customer c = new Customer(22, "Depardieu", "Acteur", 1000);
+//		DAO.update(c);
+		
+		//Supprimer un Customer par id
+	//	DAO.delete(22);
+	}
+}

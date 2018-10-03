@@ -1,0 +1,17 @@
+package service;
+
+import exception.MyBusinessException;
+import model.Customer;
+import persistence.CustomerDao;
+import persistence.CustomerDaoImpl;
+
+public class CustomerServiceImpl implements CustomerService {
+	private CustomerDao dao = new CustomerDaoImpl();
+
+	@Override
+	public void ajouterCustomer(Customer c) throws MyBusinessException {
+		// TODO Auto-generated method stub
+
+	}
+
+}

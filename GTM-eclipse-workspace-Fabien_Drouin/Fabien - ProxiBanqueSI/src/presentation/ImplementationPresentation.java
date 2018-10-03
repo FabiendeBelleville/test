@@ -1,0 +1,54 @@
+package presentation;
+
+import java.util.Scanner;
+
+import model.Agence;
+import model.Gerant;
+import service.ImplementationService;
+
+/**
+ * 
+ * @author Fabien & Madjid; A ce stade du développement de l'application, la
+ *         classe Presentation contenant une méthode main nous permet de lancer
+ *         le programme. En intéragissant avec l'utilisateur, les données
+ *         initiales sont saisie, les objets sont instanciés, les méthodes sont
+ *         appelées.
+ *
+ */
+public class ImplementationPresentation implements Presentation {
+
+	@Override
+	public void bonjour() {
+		// Initialisations
+
+		System.out.println("Bonjour,");
+		System.out.println("Le programme ProxiBanqueSI se lance");
+
+		Scanner scanner = new Scanner(System.in);
+
+		String tmpnom, tmpprenom;
+		System.out.println("Veuillez entrer le nom du Gerant de l'agence");
+		tmpnom = scanner.nextLine();
+		System.out.println("Veuillez entrer le prenom du Gerant de l'agence");
+		tmpprenom = scanner.nextLine();
+
+		Gerant g1 = new Gerant(tmpnom, tmpprenom, "545k4");
+		System.out.println("Vous avez créé le " + g1);
+		Agence a1 = new Agence(g1.idAgence, "01 janvier 1974", g1.getNom());
+		System.out.println("Vous êtes dans l'" + a1);
+	}
+
+	@Override
+	public void ouvrirMenu() {
+
+		// Ouverture menu
+		ImplementationService menu0 = new ImplementationService();
+		menu0.menu(0);
+	}
+
+	@Override
+	public void fin() {
+		System.out.println("********FIN****************************************************");
+	}
+
+}

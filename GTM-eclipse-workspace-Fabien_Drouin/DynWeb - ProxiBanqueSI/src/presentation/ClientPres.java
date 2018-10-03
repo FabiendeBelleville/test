@@ -1,0 +1,135 @@
+package presentation;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import service.ImplementationService;
+
+/**
+ * Servlet implementation class CestQui
+ */
+@WebServlet("/client")
+public class ClientPres extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	String nom;
+	String prenom;
+	String adresse;
+	int cp;
+	String ville;
+	double firstDepotCC;
+	double firstDepotCE;
+	ImplementationService sa = new ImplementationService();
+
+	/**
+	 * @see HttpServlet#HttpServlet()
+	 */
+	public ClientPres() {
+		super();
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		PrintWriter writer = response.getWriter();
+
+		String nom = request.getParameter("nom");
+		String prenom = request.getParameter("prenom");
+		String adresse = request.getParameter("adresse");
+		String cpS = request.getParameter("cp");
+		int cp = Integer.parseInt(cpS);
+		String ville = request.getParameter("ville");
+		double firstDepotCC = 1000;
+		double firstDepotCE = 1000;
+
+		writer.println("<p>***********************Réponse du formulaire***********************");
+		writer.println("<p> Nom : " + nom);
+		writer.println("<p> Prénom : " + prenom);
+		writer.println("<p> Adresse : " + adresse);
+		writer.println("<p> Code Postal : " + cp);
+		writer.println("<p> Ville : " + ville);
+		writer.println("<p> 1er dépot Compte Courant : " + request.getParameter("depotCC"));
+		writer.println("<p> 1er dépot Compte Epargne : " + request.getParameter("depotCE"));
+
+		sa.creerClient();
+
+		writer.println("<p>*******************************************************************");
+		response.getWriter().append("<p> Served at: ").append(request.getContextPath());
+
+		writer.close();
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+	// getters and setters
+
+	public String getNom() {
+		return nom;
+	}
+
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+	public String getAdresse() {
+		return adresse;
+	}
+
+	public void setAdresse(String adresse) {
+		this.adresse = adresse;
+	}
+
+	public int getCp() {
+		return cp;
+	}
+
+	public void setCp(int cp) {
+		this.cp = cp;
+	}
+
+	public String getVille() {
+		return ville;
+	}
+
+	public void setVille(String ville) {
+		this.ville = ville;
+	}
+
+	public double getFirstDepotCC() {
+		return firstDepotCC;
+	}
+
+	public void setFirstDepotCC(double firstDepotCC) {
+		this.firstDepotCC = firstDepotCC;
+	}
+
+	public double getFirstDepotCE() {
+		return firstDepotCE;
+	}
+
+	public void setFirstDepotCE(double firstDepotCE) {
+		this.firstDepotCE = firstDepotCE;
+	}
+
+}

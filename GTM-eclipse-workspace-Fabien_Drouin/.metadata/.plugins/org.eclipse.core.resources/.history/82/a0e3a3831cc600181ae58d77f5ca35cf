@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>TPSimpleJspServlet3Redir</title>
+</head>
+<body>
+
+	<h1>Page login - Formulaire</h1>
+	<p>Cher utilisateur, veuillez vous loger</p>
+
+	<form method="post" action="CestQui">
+		<fieldset>
+			<legend>log in</legend>
+
+			<p>
+				login : <input type="text" name="login" placeholder="Dupont" /> <br>
+				password : <input type="text" name="password"
+					placeholder="pas azerty..." /> <br>
+		</fieldset>
+
+
+
+		<input type="reset" value="reset" /> <input type="submit"
+			value="Envoyer" />
+	</form>
+
+
+
+
+</body>
+</html>

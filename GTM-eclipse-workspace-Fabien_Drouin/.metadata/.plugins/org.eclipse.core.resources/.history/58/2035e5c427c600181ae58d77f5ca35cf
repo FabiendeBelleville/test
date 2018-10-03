@@ -1,0 +1,8 @@
+package blabla;
+
+public class User {
+	
+	private String login;
+	private String pwd;
+
+}
